@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ItemListContainer from './components/ItemListContainer/itemListContainer';
+import ItemListContainer from './components/ItemListContainer/itemListContainer'
 import NavBar from './components/NavBar/navBar';
 import CartWidget from './components/CartWidget/cartWidget';
 import ItemDetailContainer from './components/ItemDetailContainer/itemDetailContainer';
-
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -27,7 +25,6 @@ const router = createBrowserRouter([
     path:"/item/:id",
     element: <ItemDetailContainer/>
   }
-
   //,
   // {
   //   path:"/checkout",

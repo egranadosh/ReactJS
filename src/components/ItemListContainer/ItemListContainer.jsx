@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import NavBar from "../NavBar/navBar";
 
 
 
@@ -6,26 +7,27 @@ const ItemListContainer = () =>{
     const { id } = useParams();
     return (
         <div>
-            <Link to="/category/pants">
+            <NavBar/>
+            {/* <Link to="/category/pants">
                 <button>Pantalones</button>
             </Link>
             <Link to="/category/shoes">
                 <button>Zapatos</button>
-            </Link>
+            </Link> */}
 
-            {id && id === "pants" && (
+            {id && id === "perros" && (
                 <div>
-                    <h1>Pantalon</h1>
-                    <p>Esta es la descripcion del producto pantalon</p>
-                    <span>Categoria: Pantalon</span>
+                    <h1>Perros</h1>
+                    <p>Esta es la descripcion de productos para perros</p>
+                    <span>Categoria: Perros</span>
                     <button>Ir al detalle</button>
                 </div>
             )}
-            {id && id === "shoes" && (
+            {id && id === "gatos" && (
                 <div>
-                    <h1>Zapato</h1>
-                    <p>Esta es la descripcion del producto pantalon</p>
-                    <span>Categoria: Zapato</span>
+                    <h1>Gatos</h1>
+                    <p>Esta es la descripcion de productos para gatos</p>
+                    <span>Categoria: Gatos</span>
                     <button>Ir al detalle</button>
                 </div>
             )}
