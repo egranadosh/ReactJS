@@ -3,11 +3,43 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ItemListContainer from './components/ItemListContainer/itemListContainer';
+import NavBar from './components/NavBar/navBar';
+import CartWidget from './components/CartWidget/cartWidget';
+import ItemDetailContainer from './components/ItemDetailContainer/itemDetailContainer';
+
+import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<ItemListContainer/>
+  },
+  {
+    path:"/cart",
+    element: <CartWidget/>
+  },
+  {
+    path:"/category/:id",
+    element: <ItemListContainer/>
+  },
+  {
+    path:"/item/:id",
+    element: <ItemDetailContainer/>
+  }
+
+  //,
+  // {
+  //   path:"/checkout",
+  //   element: <div>Hello world!</div>
+  // }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={ router }/>
   </React.StrictMode>
 );
 
