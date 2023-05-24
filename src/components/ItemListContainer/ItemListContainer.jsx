@@ -20,7 +20,7 @@ const ItemListContainer = () =>{
                     <h1>Perros</h1>
                     <p>Esta es la descripcion de productos para perros</p>
                     <span>Categoria: Perros</span>
-                    <button>Ir al detalle</button>
+                    <Link to="/detail/perros"><button>Ir al detalle</button></Link>
                 </div>
             )}
             {id && id === "gatos" && (
@@ -28,7 +28,7 @@ const ItemListContainer = () =>{
                     <h1>Gatos</h1>
                     <p>Esta es la descripcion de productos para gatos</p>
                     <span>Categoria: Gatos</span>
-                    <button>Ir al detalle</button>
+                    <Link to="/detail/gatos"><button>Ir al detalle</button></Link>
                 </div>
             )}
         </div>

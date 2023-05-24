@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/navBar';
 import CartWidget from './components/CartWidget/cartWidget';
 import ItemDetailContainer from './components/ItemDetailContainer/itemDetailContainer';
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
+import DetailItem from './components/DetailItem/detailItem';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,12 @@ const router = createBrowserRouter([
   {
     path:"/item/:id",
     element: <ItemDetailContainer/>
+  },
+  {
+    path:"/detail/:id",
+    element: <DetailItem/>
   }
+
   //,
   // {
   //   path:"/checkout",
